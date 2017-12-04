@@ -111,7 +111,7 @@ namespace AuthenticationApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
+                //return View(model);
             }
 
             var user = await _userManager.GetUserAsync(User);
