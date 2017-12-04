@@ -5,14 +5,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AuthenticationApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AuthenticationApp.Controllers
 {
+    
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
-            return View();
+            return View();//Test
         }
 
         public IActionResult About()
@@ -22,6 +24,7 @@ namespace AuthenticationApp.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
